@@ -138,6 +138,9 @@
 		2A8CD4A31C2011CE00699D14 /* tag_carmera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8CD4271C2011CE00699D14 /* tag_carmera@2x.png */; };
 		2A8CD4A41C2011CE00699D14 /* weichat_session@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8CD4281C2011CE00699D14 /* weichat_session@2x.png */; };
 		2A8CD4A51C2011CE00699D14 /* weichat_TimeLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8CD4291C2011CE00699D14 /* weichat_TimeLine@2x.png */; };
+		2ADB4FDD1C241D0F00E46654 /* FurnitureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB4FDC1C241D0F00E46654 /* FurnitureController.swift */; };
+		2ADB4FDF1C241D3400E46654 /* PublishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB4FDE1C241D3400E46654 /* PublishController.swift */; };
+		2ADB4FE11C241D5700E46654 /* PersonCenterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB4FE01C241D5700E46654 /* PersonCenterController.swift */; };
 		5A47BAFAF13186C1DC998C7B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17949ACB1B61B0A65C65A815 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -288,6 +291,9 @@
 		2A8CD4271C2011CE00699D14 /* tag_carmera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tag_carmera@2x.png"; sourceTree = "<group>"; };
 		2A8CD4281C2011CE00699D14 /* weichat_session@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weichat_session@2x.png"; sourceTree = "<group>"; };
 		2A8CD4291C2011CE00699D14 /* weichat_TimeLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weichat_TimeLine@2x.png"; sourceTree = "<group>"; };
+		2ADB4FDC1C241D0F00E46654 /* FurnitureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FurnitureController.swift; sourceTree = "<group>"; };
+		2ADB4FDE1C241D3400E46654 /* PublishController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishController.swift; sourceTree = "<group>"; };
+		2ADB4FE01C241D5700E46654 /* PersonCenterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCenterController.swift; sourceTree = "<group>"; };
 		62C355D72A30B1A18F171F9B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FC174B743F604E811F3ADAF4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -343,6 +349,7 @@
 		2A619C3A1BAD909600DFA8D9 /* JuPlus */ = {
 			isa = PBXGroup;
 			children = (
+				2ADB4FD51C240AC500E46654 /* Controllers */,
 				2A8CD3A51C2011CE00699D14 /* Images */,
 				2A619C3D1BAD909600DFA8D9 /* AppDelegate.swift */,
 				2A619C421BAD909600DFA8D9 /* ViewController.swift */,
@@ -573,6 +580,16 @@
 				2A8CD4291C2011CE00699D14 /* weichat_TimeLine@2x.png */,
 			);
 			path = Verson2;
+			sourceTree = "<group>";
+		};
+		2ADB4FD51C240AC500E46654 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2ADB4FDC1C241D0F00E46654 /* FurnitureController.swift */,
+				2ADB4FDE1C241D3400E46654 /* PublishController.swift */,
+				2ADB4FE01C241D5700E46654 /* PersonCenterController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		7F8F59D516A201812CD032E4 /* Frameworks */ = {
@@ -860,9 +877,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ADB4FDD1C241D0F00E46654 /* FurnitureController.swift in Sources */,
 				2A619C431BAD909600DFA8D9 /* ViewController.swift in Sources */,
 				2A619C411BAD909600DFA8D9 /* JuPlus.xcdatamodeld in Sources */,
 				2A619C3E1BAD909600DFA8D9 /* AppDelegate.swift in Sources */,
+				2ADB4FDF1C241D3400E46654 /* PublishController.swift in Sources */,
+				2ADB4FE11C241D5700E46654 /* PersonCenterController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
