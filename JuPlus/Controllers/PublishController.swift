@@ -7,3 +7,12 @@
 //
 
 import Foundation
+import UIKit
+
+class PublishController:UIViewController
+{
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor=UIColor.cyanColor()
+    }
+}

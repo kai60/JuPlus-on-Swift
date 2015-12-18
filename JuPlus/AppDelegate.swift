@@ -11,6 +11,8 @@ import CoreData
 
 
 
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -21,6 +23,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         
+        let  furnitureVC=FurnitureController()
+        
+        let publishVC=PublishController()
+        let personCenterVC=PersonCenterCotroller()
+        
+       let funitureNavi=UINavigationController(rootViewController: furnitureVC)
+        
+        funitureNavi.tabBarItem=UITabBarItem (title: "居+", image: UIImage (named: "icons_up"), selectedImage: UIImage (named: "icons_down"));
+        
+        
+         let publishNavi=UINavigationController(rootViewController: publishVC)
+        
+         publishNavi.tabBarItem=UITabBarItem (title: "发布", image: UIImage (named: "icons_up"), selectedImage: UIImage (named: "icons_down"));
+         let personCenterNavi=UINavigationController(rootViewController: personCenterVC)
+         personCenterNavi.tabBarItem=UITabBarItem (title: "个人中心", image: UIImage (named: "icons_Person"), selectedImage: UIImage (named: "icons_Person"));
+        
+        let  tabController=ViewController()
+        tabController.viewControllers=[funitureNavi,publishNavi,personCenterNavi]
+        tabController.selectedIndex=1;
+        self.window?.rootViewController=tabController;
+        
+        
+       
         
         return true
     }
