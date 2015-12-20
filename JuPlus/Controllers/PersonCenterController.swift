@@ -9,10 +9,13 @@
 import Foundation
 import UIKit
 
-class PersonCenterCotroller:UIViewController
+class PersonCenterCotroller:RootViewController
 {
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
-        self.view.backgroundColor=UIColor.orangeColor()
+        self.view.backgroundColor=UIColor.whiteColor()
+        self.title="个人中心"
     }
 }

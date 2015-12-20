@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A5C66AF1C2458FF00B65DA7 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5C66AE1C2458FF00B65DA7 /* Common.swift */; };
 		2A619C3E1BAD909600DFA8D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A619C3D1BAD909600DFA8D9 /* AppDelegate.swift */; };
 		2A619C411BAD909600DFA8D9 /* JuPlus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A619C3F1BAD909600DFA8D9 /* JuPlus.xcdatamodeld */; };
 		2A619C431BAD909600DFA8D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A619C421BAD909600DFA8D9 /* ViewController.swift */; };
@@ -138,6 +139,7 @@
 		2A8CD4A31C2011CE00699D14 /* tag_carmera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8CD4271C2011CE00699D14 /* tag_carmera@2x.png */; };
 		2A8CD4A41C2011CE00699D14 /* weichat_session@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8CD4281C2011CE00699D14 /* weichat_session@2x.png */; };
 		2A8CD4A51C2011CE00699D14 /* weichat_TimeLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8CD4291C2011CE00699D14 /* weichat_TimeLine@2x.png */; };
+		2ADB21261C2454AA00E1157F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB21251C2454AA00E1157F /* RootViewController.swift */; };
 		2ADB4FDD1C241D0F00E46654 /* FurnitureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB4FDC1C241D0F00E46654 /* FurnitureController.swift */; };
 		2ADB4FDF1C241D3400E46654 /* PublishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB4FDE1C241D3400E46654 /* PublishController.swift */; };
 		2ADB4FE11C241D5700E46654 /* PersonCenterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB4FE01C241D5700E46654 /* PersonCenterController.swift */; };
@@ -156,6 +158,7 @@
 
 /* Begin PBXFileReference section */
 		17949ACB1B61B0A65C65A815 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A5C66AE1C2458FF00B65DA7 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		2A619C381BAD909600DFA8D9 /* JuPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A619C3C1BAD909600DFA8D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A619C3D1BAD909600DFA8D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -291,6 +294,7 @@
 		2A8CD4271C2011CE00699D14 /* tag_carmera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tag_carmera@2x.png"; sourceTree = "<group>"; };
 		2A8CD4281C2011CE00699D14 /* weichat_session@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weichat_session@2x.png"; sourceTree = "<group>"; };
 		2A8CD4291C2011CE00699D14 /* weichat_TimeLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weichat_TimeLine@2x.png"; sourceTree = "<group>"; };
+		2ADB21251C2454AA00E1157F /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		2ADB4FDC1C241D0F00E46654 /* FurnitureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FurnitureController.swift; sourceTree = "<group>"; };
 		2ADB4FDE1C241D3400E46654 /* PublishController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishController.swift; sourceTree = "<group>"; };
 		2ADB4FE01C241D5700E46654 /* PersonCenterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCenterController.swift; sourceTree = "<group>"; };
@@ -326,6 +330,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2A5C66AD1C2458E500B65DA7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2A5C66AE1C2458FF00B65DA7 /* Common.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		2A619C2F1BAD909600DFA8D9 = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +361,7 @@
 		2A619C3A1BAD909600DFA8D9 /* JuPlus */ = {
 			isa = PBXGroup;
 			children = (
+				2A5C66AD1C2458E500B65DA7 /* Common */,
 				2ADB4FD51C240AC500E46654 /* Controllers */,
 				2A8CD3A51C2011CE00699D14 /* Images */,
 				2A619C3D1BAD909600DFA8D9 /* AppDelegate.swift */,
@@ -588,6 +601,7 @@
 				2ADB4FDC1C241D0F00E46654 /* FurnitureController.swift */,
 				2ADB4FDE1C241D3400E46654 /* PublishController.swift */,
 				2ADB4FE01C241D5700E46654 /* PersonCenterController.swift */,
+				2ADB21251C2454AA00E1157F /* RootViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -877,9 +891,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A5C66AF1C2458FF00B65DA7 /* Common.swift in Sources */,
 				2ADB4FDD1C241D0F00E46654 /* FurnitureController.swift in Sources */,
 				2A619C431BAD909600DFA8D9 /* ViewController.swift in Sources */,
 				2A619C411BAD909600DFA8D9 /* JuPlus.xcdatamodeld in Sources */,
+				2ADB21261C2454AA00E1157F /* RootViewController.swift in Sources */,
 				2A619C3E1BAD909600DFA8D9 /* AppDelegate.swift in Sources */,
 				2ADB4FDF1C241D3400E46654 /* PublishController.swift in Sources */,
 				2ADB4FE11C241D5700E46654 /* PersonCenterController.swift in Sources */,

@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
          let publishNavi=UINavigationController(rootViewController: publishVC)
         
-         publishNavi.tabBarItem=UITabBarItem (title: "发布", image: UIImage (named: "icons_up"), selectedImage: UIImage (named: "icons_down"));
+         publishNavi.tabBarItem=UITabBarItem (title: "发布", image: UIImage (named: "carma_shot"), selectedImage: UIImage (named: "carma_shot"));
          let personCenterNavi=UINavigationController(rootViewController: personCenterVC)
          personCenterNavi.tabBarItem=UITabBarItem (title: "个人中心", image: UIImage (named: "icons_Person"), selectedImage: UIImage (named: "icons_Person"));
         

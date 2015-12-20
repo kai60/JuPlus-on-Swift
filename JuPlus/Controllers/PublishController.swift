@@ -9,10 +9,11 @@
 import Foundation
 import UIKit
 
-class PublishController:UIViewController
+class PublishController:RootViewController
 {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor=UIColor.cyanColor()
+    self.view.backgroundColor=UIColor.whiteColor()
+        self.title="发布"
     }
 }
