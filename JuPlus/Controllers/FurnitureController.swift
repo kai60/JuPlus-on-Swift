@@ -56,11 +56,18 @@ class FurnitureController:RootViewController,UITableViewDelegate,UITableViewData
     func loadNewData()
     {
        let request=netManager.request(.GET, baseUrl+"/collocate/list", parameters: ["pageNum":"1","pageSize":"10","tagId":"0"], encoding: .URLEncodedInURL, headers: nil)
+        //json 是个枚举 有
         request.responseJSON { (json) -> Void in
             
             print("成功啦！")
-            print(json)
+            if json.result.isSuccess
+            {
+                let ok=json.result.value
+                print(ok)
+            }
+           self.tableView.mj_header.endRefreshing()
         }
+        
         
     }
     func loadMoreData()
