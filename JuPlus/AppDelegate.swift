@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let  tabController=ViewController()
         tabController.viewControllers=[funitureNavi,publishNavi,personCenterNavi]
-        tabController.selectedIndex=1;
+        tabController.selectedIndex=0;
         self.window?.rootViewController=tabController;
         
         

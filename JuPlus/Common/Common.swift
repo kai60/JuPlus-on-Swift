@@ -13,4 +13,7 @@ import Foundation
 import UIKit
 
 
-var baseUrl="http://121.40.228.199:8859"
+let baseUrl="http://121.40.228.199:8859"
+
+let version=(NSBundle.mainBundle().infoDictionary![kCFBundleVersionKey as String]) as? String
+let header=["User-Agent":"Jujia-App_"+version!+":IOS"]

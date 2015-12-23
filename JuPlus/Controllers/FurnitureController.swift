@@ -55,17 +55,36 @@ class FurnitureController:RootViewController,UITableViewDelegate,UITableViewData
     
     func loadNewData()
     {
-       let request=netManager.request(.GET, baseUrl+"/collocate/list", parameters: ["pageNum":"1","pageSize":"10","tagId":"0"], encoding: .URLEncodedInURL, headers: nil)
-        //json 是个枚举 有
-        request.responseJSON { (json) -> Void in
+       var request=netManager.request(.GET, baseUrl+"/collocate/list", parameters: ["pageNum":"1","pageSize":"10","tagId":"0"], encoding: .URLEncodedInURL, headers: nil)
+        
+        
+        // json 现在就是reponse的结构体 只closure的形参 它的构建是在内部完成的
+        // value 在成功的result的value里面
+        request.responseJSON { (resultJSON) -> Void in
             
-            print("成功啦！")
-            if json.result.isSuccess
+            if resultJSON.result.isSuccess
             {
-                let ok=json.result.value
-                print(ok)
+                print(resultJSON.result.value)
             }
-           self.tableView.mj_header.endRefreshing()
+            else
+            {
+                
+            }
+            self.tableView.mj_header .endRefreshing()
+        }
+        
+        request.responseString { (resultString) -> Void in
+            
+            
+            if resultString.result.isSuccess
+            {
+                print(resultString.result.value)
+            }
+            else
+            {
+                
+            }
+            self.tableView.mj_header .endRefreshing()
         }
         
         
