@@ -16,7 +16,7 @@ class FurnitureController:RootViewController,UITableViewDelegate,UITableViewData
 {
     
     var tableView:UITableView!
-    var dataArray:NSMutableArray!
+    var dataArray:[AnyObject]!
     var netManager:Manager!
     override func viewDidLoad()
     {
@@ -31,7 +31,7 @@ class FurnitureController:RootViewController,UITableViewDelegate,UITableViewData
     
     func prepareData()
     {
-        dataArray=NSMutableArray()
+        dataArray=[AnyObject]()
        
         netManager=Alamofire.Manager.sharedInstance
         netManager.startRequestsImmediately=true
@@ -51,11 +51,11 @@ class FurnitureController:RootViewController,UITableViewDelegate,UITableViewData
         self.tableView.mj_header.beginRefreshing()
         
     }
-    //MARK:---------LoadData------------
+    //MARK:---------DataWork------------
     
     func loadNewData()
     {
-       var request=netManager.request(.GET, baseUrl+"/collocate/list", parameters: ["pageNum":"1","pageSize":"10","tagId":"0"], encoding: .URLEncodedInURL, headers: nil)
+       let request=netManager.request(.GET, baseUrl+"/collocate/list", parameters: ["pageNum":"1","pageSize":"10","tagId":"0"], encoding: .URLEncodedInURL, headers: header)
         
         
         // json 现在就是reponse的结构体 只closure的形参 它的构建是在内部完成的
@@ -64,21 +64,13 @@ class FurnitureController:RootViewController,UITableViewDelegate,UITableViewData
             
             if resultJSON.result.isSuccess
             {
-                print(resultJSON.result.value)
-            }
-            else
-            {
+                let value=resultJSON.result.value! as! Dictionary<String,AnyObject>
+                let data:Dictionary=value[dataKey] as! Dictionary<String,AnyObject>
                 
-            }
-            self.tableView.mj_header .endRefreshing()
-        }
-        
-        request.responseString { (resultString) -> Void in
-            
-            
-            if resultString.result.isSuccess
-            {
-                print(resultString.result.value)
+                self.dataArray.removeAll();
+                self.dataArray=data["list"] as! [AnyObject]
+                print(self.dataArray)
+                
             }
             else
             {

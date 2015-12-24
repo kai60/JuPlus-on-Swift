@@ -17,3 +17,7 @@ let baseUrl="http://121.40.228.199:8859"
 
 let version=(NSBundle.mainBundle().infoDictionary![kCFBundleVersionKey as String]) as? String
 let header=["User-Agent":"Jujia-App_"+version!+":IOS"]
+let  dataKey="data"
+let  resCodeKey="resCode";
+let resMsgKey="resMsg"
+

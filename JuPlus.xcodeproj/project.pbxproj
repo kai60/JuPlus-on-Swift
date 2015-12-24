@@ -143,6 +143,8 @@
 		2ADB4FDD1C241D0F00E46654 /* FurnitureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB4FDC1C241D0F00E46654 /* FurnitureController.swift */; };
 		2ADB4FDF1C241D3400E46654 /* PublishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB4FDE1C241D3400E46654 /* PublishController.swift */; };
 		2ADB4FE11C241D5700E46654 /* PersonCenterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB4FE01C241D5700E46654 /* PersonCenterController.swift */; };
+		2AE00D2C1C2BE2730090AC9C /* FurnitureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE00D2B1C2BE2730090AC9C /* FurnitureCell.swift */; };
+		2AE00D2E1C2BE48C0090AC9C /* FurnitureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE00D2D1C2BE48B0090AC9C /* FurnitureCell.xib */; };
 		5A47BAFAF13186C1DC998C7B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17949ACB1B61B0A65C65A815 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -298,6 +300,8 @@
 		2ADB4FDC1C241D0F00E46654 /* FurnitureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FurnitureController.swift; sourceTree = "<group>"; };
 		2ADB4FDE1C241D3400E46654 /* PublishController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishController.swift; sourceTree = "<group>"; };
 		2ADB4FE01C241D5700E46654 /* PersonCenterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCenterController.swift; sourceTree = "<group>"; };
+		2AE00D2B1C2BE2730090AC9C /* FurnitureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FurnitureCell.swift; sourceTree = "<group>"; };
+		2AE00D2D1C2BE48B0090AC9C /* FurnitureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FurnitureCell.xib; sourceTree = "<group>"; };
 		62C355D72A30B1A18F171F9B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FC174B743F604E811F3ADAF4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -361,6 +365,8 @@
 		2A619C3A1BAD909600DFA8D9 /* JuPlus */ = {
 			isa = PBXGroup;
 			children = (
+				2AE00D2A1C2BE1FA0090AC9C /* Model */,
+				2AE00D291C2BE1E30090AC9C /* Views */,
 				2A5C66AD1C2458E500B65DA7 /* Common */,
 				2ADB4FD51C240AC500E46654 /* Controllers */,
 				2A8CD3A51C2011CE00699D14 /* Images */,
@@ -606,6 +612,22 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		2AE00D291C2BE1E30090AC9C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2AE00D2B1C2BE2730090AC9C /* FurnitureCell.swift */,
+				2AE00D2D1C2BE48B0090AC9C /* FurnitureCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2AE00D2A1C2BE1FA0090AC9C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7F8F59D516A201812CD032E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -706,6 +728,7 @@
 				2A8CD4751C2011CE00699D14 /* method_no@2x.png in Resources */,
 				2A8CD4961C2011CE00699D14 /* camera_tag_01@2x.png in Resources */,
 				2A8CD47D1C2011CE00699D14 /* designer@2x.png in Resources */,
+				2AE00D2E1C2BE48C0090AC9C /* FurnitureCell.xib in Resources */,
 				2A8CD4431C2011CE00699D14 /* becomeDesigner@2x.png in Resources */,
 				2A8CD46F1C2011CE00699D14 /* logo_02.png in Resources */,
 				2A8CD4381C2011CE00699D14 /* Icon.png in Resources */,
@@ -897,6 +920,7 @@
 				2A619C411BAD909600DFA8D9 /* JuPlus.xcdatamodeld in Sources */,
 				2ADB21261C2454AA00E1157F /* RootViewController.swift in Sources */,
 				2A619C3E1BAD909600DFA8D9 /* AppDelegate.swift in Sources */,
+				2AE00D2C1C2BE2730090AC9C /* FurnitureCell.swift in Sources */,
 				2ADB4FDF1C241D3400E46654 /* PublishController.swift in Sources */,
 				2ADB4FE11C241D5700E46654 /* PersonCenterController.swift in Sources */,
 			);
