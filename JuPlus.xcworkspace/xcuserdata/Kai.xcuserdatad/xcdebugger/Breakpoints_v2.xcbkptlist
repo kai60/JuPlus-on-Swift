@@ -10,11 +10,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JuPlus/Common/Common.swift"
-            timestampString = "472545121.449201"
+            timestampString = "473598452.11488"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19">
+            startingLineNumber = "22"
+            endingLineNumber = "22">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JuPlus/Controllers/FurnitureController.swift"
+            timestampString = "473599478.680466"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "loadNewData()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JuPlus/Controllers/FurnitureController.swift"
+            timestampString = "473599722.366016"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "loadMoreData()"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -24,12 +56,76 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JuPlus/Controllers/FurnitureController.swift"
-            timestampString = "472648163.892907"
+            timestampString = "473599724.902823"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "loadNewData()"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "loadMoreData()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JuPlus/Controllers/FurnitureController.swift"
+            timestampString = "473599728.151933"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "loadMoreData()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JuPlus.FurnitureController.loadMoreData (JuPlus.FurnitureController)() -&gt; ()"
+                  moduleName = "JuPlus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kai/Desktop/Kai/JuPlus-on-Swift/JuPlus/Controllers/FurnitureController.swift"
+                  timestampString = "473599728.155569"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "1267">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JuPlus.FurnitureController.(loadMoreData (JuPlus.FurnitureController) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "JuPlus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kai/Desktop/Kai/JuPlus-on-Swift/JuPlus/Controllers/FurnitureController.swift"
+                  timestampString = "473599728.155972"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "2935">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JuPlus/Controllers/FurnitureController.swift"
+            timestampString = "473599789.572578"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "loadMoreData()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

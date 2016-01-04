@@ -18,6 +18,9 @@ class FurnitureController:RootViewController,UITableViewDelegate,UITableViewData
     var tableView:UITableView!
     var dataArray:[AnyObject]!
     var netManager:Manager!
+    var pageNumber=1
+    var pageSize=10;
+    var tagId=0
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -40,6 +43,9 @@ class FurnitureController:RootViewController,UITableViewDelegate,UITableViewData
     func UIConfig ()
     {
         tableView=UITableView (frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height), style: UITableViewStyle.Plain)
+        tableView.delegate=self;
+        tableView.dataSource=self;
+        tableView.separatorStyle=UITableViewCellSeparatorStyle.None;
         self.view .addSubview(tableView)
         self.tableView.mj_header=MJRefreshNormalHeader(refreshingBlock: { [unowned self]() -> Void  in
             
@@ -50,12 +56,14 @@ class FurnitureController:RootViewController,UITableViewDelegate,UITableViewData
         })
         self.tableView.mj_header.beginRefreshing()
         
+        
     }
     //MARK:---------DataWork------------
     
     func loadNewData()
     {
-       let request=netManager.request(.GET, baseUrl+"/collocate/list", parameters: ["pageNum":"1","pageSize":"10","tagId":"0"], encoding: .URLEncodedInURL, headers: header)
+        pageNumber=1
+       let request=netManager.request(.GET, baseUrl+"collocate/list", parameters: ["pageNum":pageNumber,"pageSize":pageSize,"tagId":tagId], encoding: .URLEncodedInURL, headers: header)
         
         
         // json 现在就是reponse的结构体 只closure的形参 它的构建是在内部完成的
@@ -65,16 +73,17 @@ class FurnitureController:RootViewController,UITableViewDelegate,UITableViewData
             if resultJSON.result.isSuccess
             {
                 let value=resultJSON.result.value! as! Dictionary<String,AnyObject>
-                let data:Dictionary=value[dataKey] as! Dictionary<String,AnyObject>
+                let data:Dictionary<String,AnyObject>=value[dataKey] as! Dictionary<String,AnyObject>
                 
                 self.dataArray.removeAll();
                 self.dataArray=data["list"] as! [AnyObject]
                 print(self.dataArray)
+                self.tableView.reloadData()
                 
             }
             else
             {
-                
+               
             }
             self.tableView.mj_header .endRefreshing()
         }
@@ -83,6 +92,32 @@ class FurnitureController:RootViewController,UITableViewDelegate,UITableViewData
     }
     func loadMoreData()
     {
+        pageNumber++;
+        let request=netManager.request(.GET, baseUrl+"collocate/list", parameters: ["pageNum":pageNumber,"pageSize":pageSize,"tagId":tagId], encoding: .URLEncodedInURL, headers: header)
+        
+        
+        // json 现在就是reponse的结构体 只closure的形参 它的构建是在内部完成的
+        
+        request.responseJSON { (resultJSON) -> Void in
+            
+            if resultJSON.result.isSuccess
+            {
+                let value=resultJSON.result.value! as! Dictionary<String,AnyObject>
+                let data:Dictionary<String,AnyObject>=value[dataKey] as! Dictionary<String,AnyObject>
+                
+                let array=data["list"] as! [AnyObject]
+                self.dataArray.appendContentsOf(array)
+                print(self.dataArray)
+                self.tableView.reloadData()
+                
+            }
+            else
+            {
+                
+            }
+            self.tableView.mj_footer .endRefreshing()
+        }
+        
         
     }
     
@@ -90,29 +125,40 @@ class FurnitureController:RootViewController,UITableViewDelegate,UITableViewData
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         
-        return dataArray.count
+        
+        
+            return dataArray.count;
         
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         
-        let identifier="cell"
-        var cell:UITableViewCell?=tableView.dequeueReusableCellWithIdentifier(identifier)
+        let identifier="furnishcell"
+        var cell:FurnitureCell?=tableView.dequeueReusableCellWithIdentifier(identifier) as?FurnitureCell
         if(cell==nil)
         {
-            cell=UITableViewCell (style: UITableViewCellStyle.Default, reuseIdentifier: identifier)
+            cell=FurnitureCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: identifier)
+            cell?.selectionStyle=UITableViewCellSelectionStyle.None;
         }
+        
+        cell?.fillDataWith(dataArray[indexPath.row] as! Dictionary<String, AnyObject>)
         return cell!
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 100
+        return FurnitureCell .getHeightWith(dataArray[indexPath.row] as! Dictionary<String, AnyObject>)
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         
-        print("disdselcted")
+        print("selcted the row \(indexPath.row)")
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
     }
+  
+    
+    // MARK:---------Action-------
+
     
     
     

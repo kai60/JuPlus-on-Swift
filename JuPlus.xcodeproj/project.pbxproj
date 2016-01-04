@@ -145,6 +145,9 @@
 		2ADB4FE11C241D5700E46654 /* PersonCenterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB4FE01C241D5700E46654 /* PersonCenterController.swift */; };
 		2AE00D2C1C2BE2730090AC9C /* FurnitureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE00D2B1C2BE2730090AC9C /* FurnitureCell.swift */; };
 		2AE00D2E1C2BE48C0090AC9C /* FurnitureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE00D2D1C2BE48B0090AC9C /* FurnitureCell.xib */; };
+		2AED79761C380AFF002C7952 /* zhsrx.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2AED79741C380AFF002C7952 /* zhsrx.ttf */; };
+		2AED79771C380AFF002C7952 /* zqljyb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2AED79751C380AFF002C7952 /* zqljyb.ttf */; };
+		2AED79791C3811E6002C7952 /* WheelofKai.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AED79781C3811E6002C7952 /* WheelofKai.swift */; };
 		5A47BAFAF13186C1DC998C7B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17949ACB1B61B0A65C65A815 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -302,6 +305,9 @@
 		2ADB4FE01C241D5700E46654 /* PersonCenterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCenterController.swift; sourceTree = "<group>"; };
 		2AE00D2B1C2BE2730090AC9C /* FurnitureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FurnitureCell.swift; sourceTree = "<group>"; };
 		2AE00D2D1C2BE48B0090AC9C /* FurnitureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FurnitureCell.xib; sourceTree = "<group>"; };
+		2AED79741C380AFF002C7952 /* zhsrx.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = zhsrx.ttf; sourceTree = "<group>"; };
+		2AED79751C380AFF002C7952 /* zqljyb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = zqljyb.ttf; sourceTree = "<group>"; };
+		2AED79781C3811E6002C7952 /* WheelofKai.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelofKai.swift; sourceTree = "<group>"; };
 		62C355D72A30B1A18F171F9B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FC174B743F604E811F3ADAF4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -338,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				2A5C66AE1C2458FF00B65DA7 /* Common.swift */,
+				2AED79781C3811E6002C7952 /* WheelofKai.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -365,6 +372,7 @@
 		2A619C3A1BAD909600DFA8D9 /* JuPlus */ = {
 			isa = PBXGroup;
 			children = (
+				2AED79701C380A7D002C7952 /* OtherSources */,
 				2AE00D2A1C2BE1FA0090AC9C /* Model */,
 				2AE00D291C2BE1E30090AC9C /* Views */,
 				2A5C66AD1C2458E500B65DA7 /* Common */,
@@ -628,6 +636,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		2AED79701C380A7D002C7952 /* OtherSources */ = {
+			isa = PBXGroup;
+			children = (
+				2AED79731C380AFF002C7952 /* FontType */,
+			);
+			path = OtherSources;
+			sourceTree = "<group>";
+		};
+		2AED79731C380AFF002C7952 /* FontType */ = {
+			isa = PBXGroup;
+			children = (
+				2AED79741C380AFF002C7952 /* zhsrx.ttf */,
+				2AED79751C380AFF002C7952 /* zqljyb.ttf */,
+			);
+			path = FontType;
+			sourceTree = "<group>";
+		};
 		7F8F59D516A201812CD032E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -787,6 +812,7 @@
 				2A8CD45B1C2011CE00699D14 /* icons_logo@2x.png in Resources */,
 				2A8CD4A41C2011CE00699D14 /* weichat_session@2x.png in Resources */,
 				2A8CD42E1C2011CE00699D14 /* Default_right@2x.png in Resources */,
+				2AED79771C380AFF002C7952 /* zqljyb.ttf in Resources */,
 				2A8CD4731C2011CE00699D14 /* price_bg@2x.png in Resources */,
 				2A8CD46B1C2011CE00699D14 /* alpha_back@2x.png in Resources */,
 				2A8CD4411C2011CE00699D14 /* bar_bg_left@2x.png in Resources */,
@@ -812,6 +838,7 @@
 				2A8CD4771C2011CE00699D14 /* weixinpay@2x.png in Resources */,
 				2A8CD4931C2011CE00699D14 /* data_out@2x.png in Resources */,
 				2A8CD49B1C2011CE00699D14 /* Icons_move_down@2x.png in Resources */,
+				2AED79761C380AFF002C7952 /* zhsrx.ttf in Resources */,
 				2A8CD4391C2011CE00699D14 /* Icon@2x.png in Resources */,
 				2A8CD48E1C2011CE00699D14 /* turn_left@2x.png in Resources */,
 				2A8CD4471C2011CE00699D14 /* collect_sel@2x.png in Resources */,
@@ -914,6 +941,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AED79791C3811E6002C7952 /* WheelofKai.swift in Sources */,
 				2A5C66AF1C2458FF00B65DA7 /* Common.swift in Sources */,
 				2ADB4FDD1C241D0F00E46654 /* FurnitureController.swift in Sources */,
 				2A619C431BAD909600DFA8D9 /* ViewController.swift in Sources */,
