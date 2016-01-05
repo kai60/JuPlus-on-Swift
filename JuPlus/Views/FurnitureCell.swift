@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import Alamofire
 import SDWebImage
+import SwiftyJSON
 
 
 class FurnitureCell:UITableViewCell
@@ -64,21 +65,21 @@ class FurnitureCell:UITableViewCell
         
 
     }
-    func fillDataWith(dict:Dictionary<String,AnyObject>)
+    func fillDataWith(dict:JSON)
     {
         
-         designerButton.sd_setImageWithURL(NSURL.init(string: imageBaseUrl+(dict["portraitPath"]as! String)), forState: .Normal, placeholderImage: UIImage.init(named: "default_square"))
+         designerButton.sd_setImageWithURL(NSURL.init(string: imageBaseUrl+(dict["portraitPath"].stringValue)), forState: .Normal, placeholderImage: UIImage.init(named: "default_square"))
         
-         nickNameLabel.text=dict["nickname"] as? String
+         nickNameLabel.text=dict["nickname"].stringValue
         
-        timeLabel.text=dict["uploadTime"] as? String
+        timeLabel.text=dict["uploadTime"].stringValue
 
-        descriptionLabel.text=dict["explain"] as?String
+        descriptionLabel.text=dict["explain"].stringValue
         
-        descriptionImageView .sd_setImageWithURL(NSURL.init(string: imageBaseUrl+(dict["sharePicUrl"]as! String)), placeholderImage: UIImage.init(named: "default_square"))
+        descriptionImageView .sd_setImageWithURL(NSURL.init(string: imageBaseUrl+(dict["sharePicUrl"].stringValue)), placeholderImage: UIImage.init(named: "default_square"))
         //descriptionImageView.backgroundColor=UIColor.orangeColor()
     }
-    class func getHeightWith(dict:Dictionary<String,AnyObject>)->CGFloat
+    class func getHeightWith(dict:JSON)->CGFloat
     {
     
         return 75.0+screenWidth+5.0

@@ -10,13 +10,14 @@ import Foundation
 import UIKit
 import Alamofire
 import MJRefresh
+import SwiftyJSON
 
 
 class FurnitureController:RootViewController,UITableViewDelegate,UITableViewDataSource
 {
     
     var tableView:UITableView!
-    var dataArray:[AnyObject]!
+    var dataArray:[JSON]!
     var netManager:Manager!
     var pageNumber=1
     var pageSize=10;
@@ -34,7 +35,7 @@ class FurnitureController:RootViewController,UITableViewDelegate,UITableViewData
     
     func prepareData()
     {
-        dataArray=[AnyObject]()
+        dataArray=[JSON]()
        
         netManager=Alamofire.Manager.sharedInstance
         netManager.startRequestsImmediately=true
@@ -72,12 +73,12 @@ class FurnitureController:RootViewController,UITableViewDelegate,UITableViewData
             
             if resultJSON.result.isSuccess
             {
-                let value=resultJSON.result.value! as! Dictionary<String,AnyObject>
-                let data:Dictionary<String,AnyObject>=value[dataKey] as! Dictionary<String,AnyObject>
-                
+                let value=JSON.init(resultJSON.result.value!)
+                let data:JSON=value[dataKey]
+                data.arrayValue
                 self.dataArray.removeAll();
-                self.dataArray=data["list"] as! [AnyObject]
-                print(self.dataArray)
+                self.dataArray=data["list"].arrayValue;
+                //print(self.dataArray)
                 self.tableView.reloadData()
                 
             }
@@ -102,12 +103,11 @@ class FurnitureController:RootViewController,UITableViewDelegate,UITableViewData
             
             if resultJSON.result.isSuccess
             {
-                let value=resultJSON.result.value! as! Dictionary<String,AnyObject>
-                let data:Dictionary<String,AnyObject>=value[dataKey] as! Dictionary<String,AnyObject>
-                
-                let array=data["list"] as! [AnyObject]
-                self.dataArray.appendContentsOf(array)
-                print(self.dataArray)
+                let value=JSON.init(resultJSON.result.value!)
+                let data:JSON=value[dataKey]
+                let list=data["list"].arrayValue;
+                self.dataArray.appendContentsOf(list)
+                //print(self.dataArray)
                 self.tableView.reloadData()
                 
             }
@@ -141,11 +141,11 @@ class FurnitureController:RootViewController,UITableViewDelegate,UITableViewData
             cell?.selectionStyle=UITableViewCellSelectionStyle.None;
         }
         
-        cell?.fillDataWith(dataArray[indexPath.row] as! Dictionary<String, AnyObject>)
+        cell?.fillDataWith(dataArray[indexPath.row])
         return cell!
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return FurnitureCell .getHeightWith(dataArray[indexPath.row] as! Dictionary<String, AnyObject>)
+        return FurnitureCell .getHeightWith(dataArray[indexPath.row])
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
