@@ -11,9 +11,10 @@ import UIKit
 import Alamofire
 import MJRefresh
 import SwiftyJSON
+import SQLite
 
 
-class FurnitureController:RootViewController,UITableViewDelegate,UITableViewDataSource
+class FurnitureController:RootViewController,UITableViewDelegate,UITableViewDataSource,FurnitureCellDelegate
 {
     
     var tableView:UITableView!
@@ -29,7 +30,7 @@ class FurnitureController:RootViewController,UITableViewDelegate,UITableViewData
         self.title="居+"
         self.prepareData()
         self.UIConfig()
-        
+        self.testSqlite()
         
     }
     
@@ -39,6 +40,8 @@ class FurnitureController:RootViewController,UITableViewDelegate,UITableViewData
        
         netManager=Alamofire.Manager.sharedInstance
         netManager.startRequestsImmediately=true
+        
+        
         
     }
     func UIConfig ()
@@ -139,6 +142,7 @@ class FurnitureController:RootViewController,UITableViewDelegate,UITableViewData
         {
             cell=FurnitureCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: identifier)
             cell?.selectionStyle=UITableViewCellSelectionStyle.None;
+            cell?.delegate=self
         }
         
         cell?.fillDataWith(dataArray[indexPath.row])
@@ -155,11 +159,46 @@ class FurnitureController:RootViewController,UITableViewDelegate,UITableViewData
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
     }
-  
+    // MARK:--------SQLite------------
+    func testSqlite()
+    {
+        let documentPaths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory,
+            NSSearchPathDomainMask.UserDomainMask, true)
+        let documnetPath = documentPaths[0]
+        let path=documnetPath+"/test.db"
+        print(path)
+        
+        do
+        {
+          let db=try Connection(path)
+        }
+        
+        catch _
+        {
+            
+        }
+        
+        
+        
+
+        
+     
+        
+    }
     
     // MARK:---------Action-------
 
-    
+    // MARK:---------CellDelegate----
+    func potraitClick(cell: FurnitureCell)
+    {
+        let indexPath=tableView.indexPathForCell(cell)
+        
+        let designer=dataArray[(indexPath?.row)!]
+        //var designerVC=DesignerController()
+        let designerVC=DesignerController.init(nibName: "DesignerController", bundle: NSBundle.mainBundle())
+        designerVC.designerid=designer["memberNo"].stringValue
+        self.navigationController?.pushViewController(designerVC, animated: true)
+    }
     
     
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A1F85C41C3CF5A700CAC4D0 /* DesignerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F85C31C3CF5A700CAC4D0 /* DesignerController.swift */; };
+		2A27EA3D1C3D3F5B002BBFAE /* DesignerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A27EA3C1C3D3F5B002BBFAE /* DesignerController.xib */; };
 		2A5C66AF1C2458FF00B65DA7 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5C66AE1C2458FF00B65DA7 /* Common.swift */; };
 		2A619C3E1BAD909600DFA8D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A619C3D1BAD909600DFA8D9 /* AppDelegate.swift */; };
 		2A619C411BAD909600DFA8D9 /* JuPlus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A619C3F1BAD909600DFA8D9 /* JuPlus.xcdatamodeld */; };
@@ -141,7 +143,7 @@
 		2AE00D2E1C2BE48C0090AC9C /* FurnitureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE00D2D1C2BE48B0090AC9C /* FurnitureCell.xib */; };
 		2AED79761C380AFF002C7952 /* zhsrx.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2AED79741C380AFF002C7952 /* zhsrx.ttf */; };
 		2AED79771C380AFF002C7952 /* zqljyb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2AED79751C380AFF002C7952 /* zqljyb.ttf */; };
-		2AED79791C3811E6002C7952 /* WheelofKai.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AED79781C3811E6002C7952 /* WheelofKai.swift */; };
+		2AED79791C3811E6002C7952 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AED79781C3811E6002C7952 /* Utility.swift */; };
 		5A47BAFAF13186C1DC998C7B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17949ACB1B61B0A65C65A815 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -157,6 +159,8 @@
 
 /* Begin PBXFileReference section */
 		17949ACB1B61B0A65C65A815 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A1F85C31C3CF5A700CAC4D0 /* DesignerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignerController.swift; sourceTree = "<group>"; };
+		2A27EA3C1C3D3F5B002BBFAE /* DesignerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DesignerController.xib; sourceTree = "<group>"; };
 		2A5C66AE1C2458FF00B65DA7 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		2A619C381BAD909600DFA8D9 /* JuPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A619C3C1BAD909600DFA8D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -296,7 +300,7 @@
 		2AE00D2D1C2BE48B0090AC9C /* FurnitureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FurnitureCell.xib; sourceTree = "<group>"; };
 		2AED79741C380AFF002C7952 /* zhsrx.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = zhsrx.ttf; sourceTree = "<group>"; };
 		2AED79751C380AFF002C7952 /* zqljyb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = zqljyb.ttf; sourceTree = "<group>"; };
-		2AED79781C3811E6002C7952 /* WheelofKai.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelofKai.swift; sourceTree = "<group>"; };
+		2AED79781C3811E6002C7952 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		62C355D72A30B1A18F171F9B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FC174B743F604E811F3ADAF4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -333,7 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				2A5C66AE1C2458FF00B65DA7 /* Common.swift */,
-				2AED79781C3811E6002C7952 /* WheelofKai.swift */,
+				2AED79781C3811E6002C7952 /* Utility.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -589,6 +593,8 @@
 			isa = PBXGroup;
 			children = (
 				2ADB4FDC1C241D0F00E46654 /* FurnitureController.swift */,
+				2A1F85C31C3CF5A700CAC4D0 /* DesignerController.swift */,
+				2A27EA3C1C3D3F5B002BBFAE /* DesignerController.xib */,
 				2ADB4FDE1C241D3400E46654 /* PublishController.swift */,
 				2ADB4FE01C241D5700E46654 /* PersonCenterController.swift */,
 				2ADB21251C2454AA00E1157F /* RootViewController.swift */,
@@ -735,6 +741,7 @@
 				2A8CD4381C2011CE00699D14 /* Icon.png in Resources */,
 				2A619C461BAD909600DFA8D9 /* Main.storyboard in Resources */,
 				2A8CD45D1C2011CE00699D14 /* lineLabel@2x.png in Resources */,
+				2A27EA3D1C3D3F5B002BBFAE /* DesignerController.xib in Resources */,
 				2A8CD4561C2011CE00699D14 /* icons_01_unsel@2x.png in Resources */,
 				2A8CD45C1C2011CE00699D14 /* labelLine@2x.png in Resources */,
 				2A8CD49F1C2011CE00699D14 /* search_Tags@2x.png in Resources */,
@@ -911,11 +918,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AED79791C3811E6002C7952 /* WheelofKai.swift in Sources */,
+				2AED79791C3811E6002C7952 /* Utility.swift in Sources */,
 				2A5C66AF1C2458FF00B65DA7 /* Common.swift in Sources */,
 				2ADB4FDD1C241D0F00E46654 /* FurnitureController.swift in Sources */,
 				2A619C431BAD909600DFA8D9 /* ViewController.swift in Sources */,
 				2A619C411BAD909600DFA8D9 /* JuPlus.xcdatamodeld in Sources */,
+				2A1F85C41C3CF5A700CAC4D0 /* DesignerController.swift in Sources */,
 				2ADB21261C2454AA00E1157F /* RootViewController.swift in Sources */,
 				2A619C3E1BAD909600DFA8D9 /* AppDelegate.swift in Sources */,
 				2AE00D2C1C2BE2730090AC9C /* FurnitureCell.swift in Sources */,

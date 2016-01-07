@@ -13,6 +13,10 @@ import SDWebImage
 import SwiftyJSON
 
 
+protocol FurnitureCellDelegate :class
+{
+    func potraitClick(cell:FurnitureCell)
+}
 class FurnitureCell:UITableViewCell
 {
     var descriptionLabel:UILabel!
@@ -20,7 +24,7 @@ class FurnitureCell:UITableViewCell
     var designerButton:UIButton!
     var nickNameLabel:UILabel!
     var timeLabel:UILabel!
-
+   weak var delegate:FurnitureCellDelegate?
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.cellConfig()
@@ -94,5 +98,7 @@ class FurnitureCell:UITableViewCell
     func headerClick(sender:UIButton!)
     {
         print("headerClicked")
+         delegate?.potraitClick(self)
+        
     }
 }
